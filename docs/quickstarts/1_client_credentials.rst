@@ -57,7 +57,7 @@ Defining an API Resource
 An API is a resource in your system that you want to protect. 
 Resource definitions can be loaded in many ways, the template you used to create the project above shows how to use a "code as configuration" approach.
 
-For this add a new class to your project and call it ``Config`` - add the following code to it::
+For this update the Apis definition in the Config class which was created in the previous step::
 
     public static class Config
     {
@@ -78,7 +78,7 @@ The next step is to define a client application that we will use to access our n
 
 For this scenario, the client will not have an interactive user, and will authenticate using the so called client secret with IdentityServer.
 
-For this, add a client definition:: 
+For this, update the a Clients definition to include this:: 
 
     public static IEnumerable<Client> Clients =>
         new List<Client>
@@ -164,7 +164,7 @@ Adding a Nuget Dependency
 -----------------------
 In order for the configuration step to work the nuget package dependency has to be added, run this command in the root directory.
 
-    dotnet add .\src\api\Api.csproj package Microsoft.AspNetCore.Authentication.JwtBearer
+	dotnet add .\src\api\Api.csproj package Microsoft.AspNetCore.Authentication.JwtBearer
 
 Configuration
 -------------
